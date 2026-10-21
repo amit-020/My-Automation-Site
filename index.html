@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Amit — MIS & Automation Specialist</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f7f9fc;--alt:#eef3fb;--card:#ffffff;--txt:#0f172a;--mut:#5b6678;--line:#dfe6f1;--a:#1d4ed8;--a2:#1e3a8a;--soft:#e8efff;color-scheme:light}
+:root[data-theme="dark"]{--bg:#0a1122;--alt:#0f1a33;--card:#131f3a;--txt:#e8edf7;--mut:#9aa8c2;--line:#1f2d4d;--a:#60a5fa;--a2:#93c5fd;--soft:#1a2b52;color-scheme:dark}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{font-family:'Nunito',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--txt);line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{max-width:1160px;margin:0 auto;padding:0 22px}
+section{padding:84px 0}
+.alt{background:var(--alt)}
+.eyebrow{display:inline-block;font-size:.78rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--a);margin-bottom:10px}
+h1,h2,h3{font-weight:800;line-height:1.2}
+h2{font-size:clamp(1.7rem,3vw,2.4rem);margin-bottom:12px}
+.lead{color:var(--mut);max-width:640px;font-size:1.05rem}
+.center{text-align:center}.center .lead{margin:0 auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 24px;border-radius:10px;font:inherit;font-weight:700;font-size:.95rem;border:1px solid transparent;cursor:pointer;transition:transform .2s,background .2s,border-color .2s,color .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn-p{background:linear-gradient(135deg,var(--a),var(--a2));color:#fff;box-shadow:0 10px 24px -12px var(--a)}
+.btn-o{background:transparent;color:var(--txt);border-color:var(--line)}
+.btn-o:hover{border-color:var(--a);color:var(--a)}
+button:disabled{opacity:.6;cursor:not-allowed}
+
+/* reveal animation */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease}
+.rv.in{opacity:1;transform:none}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
+
+/* nav */
+nav{position:fixed;top:0;left:0;right:0;z-index:50;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid transparent;transition:border-color .3s;padding-top:env(safe-area-inset-top,0px)}
+nav.scrolled{border-color:var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:70px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800}
+.logo{width:40px;height:40px;border-radius:10px;background:linear-gradient(135deg,var(--a),var(--a2));color:#fff;display:grid;place-items:center;font-weight:800}
+.links{display:flex;gap:26px;font-weight:600;font-size:.93rem;color:var(--mut)}
+.links a:hover{color:var(--a)}
+.nav-r{display:flex;gap:10px;align-items:center}
+.theme{background:transparent;border:1px solid var(--line);color:var(--txt);border-radius:8px;padding:6px 12px;cursor:pointer;font:inherit;font-size:.85rem;font-weight:700}
+.burger{display:none;background:none;border:0;color:var(--txt);font-size:1.5rem;cursor:pointer}
+@media(max-width:860px){.links{display:none;position:absolute;top:70px;left:0;right:0;flex-direction:column;gap:0;background:var(--bg);border-bottom:1px solid var(--line)}.links.open{display:flex}.links a{padding:14px 24px;border-top:1px solid var(--line)}.burger{display:block}}
+
+/* HERO */
+#hero{position:relative;min-height:100vh;display:flex;align-items:center;padding:150px 0 90px;overflow:hidden;background:
+  radial-gradient(circle at 15% 20%,rgba(59,130,246,.35),transparent 45%),
+  radial-gradient(circle at 85% 80%,rgba(34,211,238,.25),transparent 45%),
+  linear-gradient(160deg,#0b1830,#0a1122 60%,#101a3a)}
+#hero::before{content:"";position:absolute;inset:-50%;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220' viewBox='0 0 220 220'%3E%3Cg fill='none' stroke='%2360a5fa' stroke-opacity='.22' stroke-width='1.2'%3E%3Cpath d='M20 40h60v40h40M140 20v60h60M20 160h40v40M120 140h80v60'/%3E%3Ccircle cx='80' cy='40' r='4'/%3E%3Ccircle cx='140' cy='120' r='4'/%3E%3Ccircle cx='120' cy='200' r='4'/%3E%3Ccircle cx='200' cy='80' r='4'/%3E%3C/g%3E%3C/svg%3E");animation:drift 60s linear infinite;opacity:.9}
+#hero::after{content:"";position:absolute;width:520px;height:520px;right:-120px;top:-120px;border-radius:50%;background:conic-gradient(from 0deg,#3b82f6,#22d3ee,#6366f1,#3b82f6);filter:blur(90px);opacity:.35;animation:spin 24s linear infinite}
+@keyframes drift{to{transform:translate(220px,220px)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+#hero h1{font-size:clamp(2.2rem,5vw,3.8rem);margin-bottom:14px;color:#fff}
+#hero .eyebrow{color:#93c5fd}
+#hero .lead{color:#b6c4de;margin-bottom:28px}
+.role{font-size:1.15rem;font-weight:700;color:#93c5fd;margin-bottom:14px;min-height:1.6em}
+.role::after{content:"|";margin-left:4px;animation:bl 1s steps(1) infinite}
+@keyframes bl{50%{opacity:0}}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px}
+#hero .btn-o{color:#e8edf7;border-color:rgba(255,255,255,.25)}
+.glass{background:rgba(19,31,58,.55);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(147,197,253,.2);border-radius:18px;padding:30px;box-shadow:0 30px 60px -30px rgba(0,0,0,.6);color:#e8edf7}
+.glass .logo{width:84px;height:84px;font-size:2.2rem;border-radius:18px;margin-bottom:16px}
+.glass li{list-style:none;display:flex;gap:10px;color:#b6c4de;font-weight:600;font-size:.95rem;margin-top:10px}
+.glass li::before{content:"✓";color:#60a5fa;font-weight:800}
+@media(max-width:860px){.hero-grid{grid-template-columns:1fr}#hero{padding-top:130px}}
+
+.strip{border-block:1px solid var(--line);padding:16px 0;color:var(--mut);font-weight:700;font-size:.9rem;text-align:center;overflow:hidden;white-space:nowrap}
+.strip span{margin:0 12px}
+
+/* about */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.chips span{padding:7px 14px;border-radius:8px;background:var(--soft);color:var(--a);font-weight:700;font-size:.88rem}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:26px}
+.stats div{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px;text-align:center}
+.stats b{display:block;font-size:1.05rem;color:var(--a)}
+.stats small{color:var(--mut);font-size:.8rem;font-weight:600}
+@media(max-width:860px){.two{grid-template-columns:1fr}}
+
+/* systems */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(265px,1fr));gap:20px;margin-top:40px}
+.sys{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px;cursor:pointer;display:flex;flex-direction:column;text-align:left;font:inherit;color:inherit;transition:transform .3s,border-color .3s,box-shadow .3s}
+.sys:hover,.sys:focus-visible{transform:translateY(-6px);border-color:var(--a);box-shadow:0 18px 36px -22px var(--a);outline:none}
+.sys .ico{width:48px;height:48px;border-radius:12px;background:var(--soft);display:grid;place-items:center;font-size:1.4rem;margin-bottom:14px}
+.sys h3{font-size:1.05rem;margin-bottom:6px}
+.sys p{color:var(--mut);font-size:.9rem;flex:1;margin-bottom:16px}
+.sys .foot{display:flex;justify-content:space-between;align-items:center;font-size:.88rem;font-weight:700}
+.sys .foot em{font-style:normal;color:var(--a)}
+
+/* process */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:40px}
+.step{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;position:relative;overflow:hidden}
+.step::before{content:"";position:absolute;left:0;top:0;right:0;height:3px;background:linear-gradient(90deg,var(--a),var(--a2))}
+.step b{color:var(--a);font-size:.8rem;letter-spacing:.12em}
+.step h3{font-size:1.02rem;margin:6px 0}
+.step p{color:var(--mut);font-size:.9rem}
+@media(max-width:860px){.steps{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.steps{grid-template-columns:1fr}}
+
+.why{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:36px}
+.why div{padding:24px;border:1px solid var(--line);border-radius:14px;background:var(--card)}
+.why h3{font-size:1.05rem;margin-bottom:6px}
+.why p{color:var(--mut);font-size:.92rem}
+@media(max-width:860px){.why{grid-template-columns:1fr}}
+
+details{border:1px solid var(--line);border-radius:12px;padding:16px 20px;margin-top:12px;background:var(--card)}
+details summary{cursor:pointer;font-weight:700;list-style:none}
+details p{color:var(--mut);margin-top:8px;font-size:.94rem}
+
+/* contact */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+.c-list{display:grid;gap:12px;margin-top:24px}
+.c-item{display:flex;align-items:center;gap:14px;padding:16px 18px;border:1px solid var(--line);border-radius:12px;background:var(--card);transition:border-color .2s,transform .2s}
+.c-item:hover{border-color:var(--a);transform:translateX(4px)}
+.c-ico{width:44px;height:44px;border-radius:10px;background:var(--soft);display:grid;place-items:center;font-size:1.2rem;flex-shrink:0}
+.c-item small{display:block;color:var(--mut);font-size:.85rem}
+.c-item b{word-break:break-all}
+form.msg{display:grid;gap:12px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px}
+input,select,textarea{width:100%;padding:11px 14px;border-radius:9px;border:1px solid var(--line);background:var(--bg);color:var(--txt);font:inherit}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--a);border-color:transparent}
+@media(max-width:860px){.contact-grid{grid-template-columns:1fr}}
+
+/* notice */
+.notice{display:flex;gap:12px;align-items:flex-start;padding:14px 16px;border-radius:12px;background:var(--soft);border:1px solid var(--a);color:var(--txt);opacity:0;transform:translateY(-8px);transition:opacity .3s,transform .3s}
+.notice[hidden]{display:none}
+.notice.show{opacity:1;transform:none}
+.notice.error{border-color:#ef4444;background:rgba(239,68,68,.12)}
+.notice-icon{width:28px;height:28px;border-radius:50%;background:var(--a);color:#fff;display:grid;place-items:center;font-weight:800;flex-shrink:0}
+.notice.error .notice-icon{background:#ef4444}
+.notice>div{flex:1}
+.notice p{color:var(--mut);font-size:.9rem;margin-top:2px}
+#noticeClose{background:none;border:0;color:var(--txt);font-size:1.2rem;cursor:pointer;line-height:1}
+
+footer{border-top:1px solid var(--line);padding:28px 0 calc(28px + env(safe-area-inset-bottom,0px));color:var(--mut);font-size:.9rem;text-align:center}
+footer b{color:var(--txt)}
+#wa{position:fixed;right:20px;bottom:calc(22px + env(safe-area-inset-bottom,0px));z-index:60;width:56px;height:56px;border-radius:50%;background:#25d366;color:#fff;display:grid;place-items:center;font-size:1.6rem;box-shadow:0 10px 24px -8px rgba(37,211,102,.8);animation:pulse 2.4s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,.55)}70%{box-shadow:0 0 0 16px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
+
+/* modals */
+.modal{position:fixed;inset:0;background:rgba(5,10,25,.7);display:none;align-items:center;justify-content:center;z-index:80;padding:18px}
+.modal.open{display:flex}
+.sheet{background:var(--card);color:var(--txt);border:1px solid var(--line);border-radius:16px;width:min(760px,100%);max-height:92vh;overflow:auto;padding:28px;position:relative;animation:pop .35s ease}
+@keyframes pop{from{opacity:0;transform:scale(.96) translateY(10px)}}
+.x{position:absolute;top:10px;right:14px;background:none;border:0;color:var(--txt);font-size:1.6rem;cursor:pointer;line-height:1}
+.sheet h2{font-size:1.5rem;padding-right:28px}
+.price{font-size:1.5rem;font-weight:800;color:var(--a);margin:8px 0 4px}
+.price small{font-size:.85rem;color:var(--mut);font-weight:600}
+.sheet h4{font-size:.95rem;margin:20px 0 8px}
+.sheet ul{padding-left:20px;color:var(--mut);display:grid;gap:4px;font-size:.95rem}
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.shot{aspect-ratio:4/3;border-radius:10px;overflow:hidden;border:1px solid var(--line);background:var(--soft);display:grid;place-items:center;cursor:zoom-in;color:var(--mut);font-size:.8rem;font-weight:600;text-align:center;padding:8px}
+.shot img{width:100%;height:100%;object-fit:cover}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+.field{display:grid;gap:6px;font-size:.88rem;font-weight:700}
+.field span em{color:#ef4444;font-style:normal}
+.note{font-size:.88rem;color:var(--mut);margin-top:12px}
+.ok{background:var(--soft);border-radius:12px;padding:14px;margin-top:14px;font-weight:600}
+@media(max-width:560px){.row,.gal{grid-template-columns:1fr}.shot{aspect-ratio:16/10}}
+
+#lb{position:fixed;inset:0;z-index:999;background:rgba(0,0,0,.94);display:none;align-items:center;justify-content:center;padding:20px}
+#lb.open{display:flex}
+#lb img{max-width:95vw;max-height:90vh;object-fit:contain;border-radius:8px}
+#lb button{position:absolute;top:14px;right:22px;background:none;border:0;color:#fff;font-size:38px;cursor:pointer}
+
+/* about + tech */
+.box{padding:26px;border:1px solid var(--line);border-radius:16px;background:var(--card);box-shadow:0 20px 40px -30px rgba(15,23,42,.35)}
+.tick li{list-style:none;display:flex;gap:10px;margin-top:10px;color:var(--mut);font-weight:600}
+.tick li::before{content:"✓";color:var(--a);font-weight:800}
+
+/* calculator */
+.calc{display:grid;grid-template-columns:1.2fr .8fr;gap:24px;margin-top:40px;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:28px;box-shadow:0 30px 60px -40px rgba(15,23,42,.4)}
+.calc-in{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.res{background:var(--soft);border-radius:12px;padding:16px;margin-bottom:12px}
+.res small{color:var(--mut);font-weight:700;display:block;font-size:.85rem}
+.res b{font-size:1.4rem;color:var(--a)}
+@media(max-width:860px){.calc{grid-template-columns:1fr}}
+@media(max-width:560px){.calc-in{grid-template-columns:1fr}}
+
+/* comparison */
+.tbl-wrap{overflow-x:auto;margin-top:36px;border-radius:14px;border:1px solid var(--line)}
+.cmp{width:100%;border-collapse:collapse;background:var(--card);font-size:.95rem;min-width:520px}
+.cmp th,.cmp td{padding:14px 16px;border-bottom:1px solid var(--line);text-align:left}
+.cmp th{background:var(--soft);font-weight:800}
+.cmp tr:last-child td{border-bottom:0}
+.cmp td:last-child{color:var(--a);font-weight:700}
+
+/* cta */
+.cta-box{background:linear-gradient(135deg,#0b1830,#1e3a8a);color:#fff;text-align:center;border-radius:22px;padding:56px 24px;position:relative;overflow:hidden}
+.cta-box h2{color:#fff}
+.cta-box p{color:#c7d6f5;margin:10px 0 24px}
+.cta-box .btn-o{color:#fff;border-color:rgba(255,255,255,.35)}
+#top{position:fixed;left:20px;bottom:calc(22px + env(safe-area-inset-bottom,0px));z-index:60;width:46px;height:46px;border-radius:50%;background:var(--card);border:1px solid var(--line);display:grid;place-items:center;font-size:1.2rem;color:var(--a);opacity:0;pointer-events:none;transition:opacity .3s}
+#top.show{opacity:1;pointer-events:auto}
+
+/* footer social */
+.social{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin:14px 0}
+.soc{width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--a);display:grid;place-items:center;transition:transform .2s,border-color .2s,background .2s}
+.soc:hover{transform:translateY(-3px);border-color:var(--a);background:var(--soft)}
+
+/* demo video */
+.stage{margin-top:40px;padding:14px;border-radius:26px;background:linear-gradient(135deg,rgba(96,165,250,.45),rgba(34,211,238,.15));box-shadow:0 40px 80px -40px rgba(29,78,216,.6)}
+.screen{position:relative;aspect-ratio:16/9;border-radius:18px;overflow:hidden;background:#0b1830;border:1px solid rgba(147,197,253,.25)}
+.screen video,.screen iframe{width:100%;height:100%;border:0;display:block}
+.play-ph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;color:#e8edf7;text-align:center;padding:16px;background:radial-gradient(circle at 50% 40%,rgba(59,130,246,.35),transparent 60%),#0b1830}
+.play{width:84px;height:84px;border-radius:50%;background:linear-gradient(135deg,#3b82f6,#22d3ee);display:grid;place-items:center;font-size:1.8rem;color:#fff;padding-left:6px;margin-bottom:10px;animation:glow 2.4s infinite}
+@keyframes glow{0%,100%{box-shadow:0 0 0 12px rgba(59,130,246,.2)}50%{box-shadow:0 0 0 24px rgba(59,130,246,.04)}}
+.play-ph small{color:#9aa8c2}
+.vfeat{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:22px}
+.vfeat div{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;text-align:center}
+.vfeat b{display:block;color:var(--a)}
+.vfeat small{color:var(--mut);font-weight:600}
+@media(max-width:860px){.vfeat{grid-template-columns:1fr}}
+
+/* photo + experience */
+.photo{width:100%;max-width:340px;aspect-ratio:4/5;border-radius:18px;overflow:hidden;border:1px solid var(--line);background:var(--soft);margin-bottom:22px;display:grid;place-items:center}
+.photo img{width:100%;height:100%;object-fit:cover}
+.photo .ph2{display:none;color:var(--mut);font-weight:700;text-align:center;padding:20px}
+.xp{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:36px}
+.xp div{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;text-align:center}
+.xp b{display:block;font-size:1.3rem;color:var(--a)}
+.xp small{color:var(--mut);font-weight:600}
+@media(max-width:860px){.xp{grid-template-columns:repeat(2,1fr)}}
+.sectors{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px;margin-top:28px}
+.sec{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;display:flex;gap:14px;align-items:center;font-weight:700;transition:transform .3s,border-color .3s}
+.sec:hover{transform:translateY(-4px);border-color:var(--a)}
+.sec span{font-size:1.5rem}
+
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<script>
+/* ===== YOUR DETAILS ===== */
+const CONFIG = {
+  name: "Amit",
+  brand: "Amit — MIS & Automation Specialist",
+  phone: "9855723648",
+  waCode: "919855723648",
+  email: "info@bizautosetup.com",
+  whatsappMsg: "Hello Amit, I would like to discuss an automation project.",
+  year: 2026,
+  showcaseVideo: "video/intro_video.mp4",
+  instagram: "",
+  linkedin: ""
+};
+
+/* ===== GOOGLE SHEET (Apps Script Web App URL) ===== */
+const SHEET_API_URL =
+  "https://script.google.com/macros/s/AKfycbz_scDl5gPgd-eFDXLCFUZUt9XAUZQusj7A9H3XMTzjCdHLT8e4ZRlsxeVE2j2VyBEzSg/exec";
+
+/* ===== SYSTEMS ===== */
+const SYSTEMS = [
+  {ico:"📦", name:"Inventory Management System", short:"Stock, vendors, deploy forms and live dashboards.",
+   brief:"A complete stock control system for stores and warehouses. Track every item, vendor and movement with a live dashboard and MIS graphs.",
+   features:["Master item and vendor lists","Stock-in / stock-out entries","Deploy form and live dashboard","MIS graphs and reports"],
+   price:25000, imgs:["","",""], pdf:""},
+  {ico:"🏭", name:"Production & FMS Flow System", short:"Order → Processing → QC → Packaging → Dispatch tracking.",
+   brief:"Follow every order through each production stage with ID-based tracking, quality checks and dispatch status.",
+   features:["Stage-wise order tracking","QC and packaging checkpoints","Dispatch status and history","Production MIS reports"],
+   price:30000, imgs:["","",""], pdf:""},
+  {ico:"🧾", name:"Billing & Challan System", short:"Invoices, challans and payment tracking.",
+   brief:"Generate invoices and delivery challans in a consistent format, and track payments and outstanding dues.",
+   features:["Invoice and challan generation","Payment and due tracking","Printable documents","Customer-wise reports"],
+   price:20000, imgs:["","",""], pdf:""},
+  {ico:"✅", name:"Task & Checklist Management", short:"Assign tasks, recurring checklists and reminders.",
+   brief:"Delegate tasks to your team, run recurring checklists and get automatic reminders for due and overdue work.",
+   features:["Task delegation","Recurring checklists","Due-soon and overdue emails","Completion tracking"],
+   price:15000, imgs:["","",""], pdf:""},
+  {ico:"🔀", name:"FMS Flowchart Management", short:"Visual workflow stages with ownership and progress.",
+   brief:"Map your business process as a clear flowchart with stages, owners and live progress status.",
+   features:["Visual stage flowchart","Owner per stage","Live progress view","Status reports"],
+   price:18000, imgs:["","",""], pdf:""},
+  {ico:"🤖", name:"Chat Bot Development", short:"Chatbots for FAQs, lead capture and queries.",
+   brief:"Customer and internal chatbots that answer common questions, capture leads and route queries to your team.",
+   features:["FAQ automation","Lead capture","Query routing to staff","Conversation analytics"],
+   price:22000, imgs:["","",""], pdf:""},
+  {ico:"💬", name:"WhatsApp Integration", short:"Automated alerts, reminders and updates.",
+   brief:"Send automated WhatsApp messages for orders, payments, reminders and updates, directly from your system.",
+   features:["Order and payment alerts","Automated reminders","Bulk messaging","Delivery status tracking"],
+   price:12000, imgs:["","",""], pdf:""},
+  {ico:"📧", name:"Automail System", short:"Automatic transactional and bulk emails.",
+   brief:"Emails triggered automatically from your data for alerts, reminders, reports and bulk campaigns.",
+   features:["Trigger-based emails","Bulk mailing","Email templates","Send logs"],
+   price:10000, imgs:["","",""], pdf:""},
+  {ico:"🔌", name:"API Integration", short:"Connect your tools, databases and services.",
+   brief:"Connect your software, databases and third-party services so data flows automatically without re-entry.",
+   features:["REST API connections","Data sync between tools","Error logging","Secure credentials handling"],
+   price:15000, imgs:["","",""], pdf:""},
+  {ico:"🧠", name:"Agentic AI Process Flow", short:"AI agents that automate multi-step work.",
+   brief:"AI-driven workflows that handle multi-step tasks and decisions, with human review where needed.",
+   features:["Multi-step AI workflows","Decision rules","Human approval points","Activity logs"],
+   price:35000, imgs:["","",""], pdf:""},
+  {ico:"🛠️", name:"Custom Software & Web Apps", short:"Tailor-made applications for your process.",
+   brief:"Custom web applications built around your exact business process, roles and reporting needs.",
+   features:["Tailor-made design","Role-based access","Mobile-friendly screens","Ongoing support"],
+   price:40000, imgs:["","",""], pdf:""},
+  {ico:"👥", name:"HR & Payroll System", short:"Salary, leave, attendance and staff login.",
+   brief:"Manage salary, attendance and leave for your staff with secure login and automatic staff emails.",
+   features:["Salary and payslips","Attendance and leave","Staff user login","Staff mailing"],
+   price:25000, imgs:["","",""], pdf:""},
+  {ico:"🤝", name:"CRM & Lead Management", short:"Lead pipeline, follow-ups and reports.",
+   brief:"Track every lead from first contact to closure, with follow-up reminders and performance reports.",
+   features:["Lead pipeline","Follow-up reminders","Status tracking","Sales reports"],
+   price:20000, imgs:["","",""], pdf:""},
+  {ico:"💰", name:"Finance & Payment Tracking", short:"Income, expenses, dues and dashboards.",
+   brief:"Keep income, expenses, receivables and payables in one place with clear finance dashboards.",
+   features:["Income and expense log","Receivables and dues","Payment tracking","Finance dashboard"],
+   price:18000, imgs:["","",""], pdf:""},
+  {ico:"☁️", name:"Cloud Database & Server Setup", short:"Secure cloud storage, backups and servers.",
+   brief:"Set up secure cloud databases and servers with backups so your business data stays safe and accessible.",
+   features:["Cloud database setup","Automatic backups","Access control","Server maintenance"],
+   price:20000, imgs:["","",""], pdf:""}
+];
+
+/* Sample screens */
+const SAMPLE_IMGS = {
+  "Inventory Management System": ["IMS_Module/2_Dashboard.png","IMS_Module/3_MIS_Stock_Position.png","IMS_Module/4_MIS_Period_and_Items.png"],
+  "Billing & Challan System": ["Billing_invoice/image_1.png","Billing_invoice/image_2.png","Billing_invoice/image_3.png"],
+  "Task & Checklist Management": ["Task_managment/image_1.png","Task_managment/image_2.png","Task_managment/image_3.png"],
+  "Chat Bot Development": ["Chat_bot/image_1.png","Chat_bot/image_4.png","Chat_bot/image_3.png"],
+  "HR & Payroll System": ["HR_Payrole/image_1.jpg","HR_Payrole/image_2.jpg","HR_Payrole/image_3.jpg"]
+};
+SYSTEMS.forEach(s => { if (SAMPLE_IMGS[s.name]) s.imgs = SAMPLE_IMGS[s.name]; });
+
+/* Quotation PDFs (folder: quotations/) */
+const QUOTE_PDFS = {
+  "Inventory Management System": "quotations/IMS_Price_List_and_Guide.pdf",
+  "Billing & Challan System": "quotations/Chalan-Pro-Briefing-v2.pdf",
+  "Task & Checklist Management": "quotations/TaskFlow_Pro_System_Brief_and_Pricing.pdf",
+  "CRM & Lead Management": "quotations/CRM_Pro_Briefing_and_Price_List.pdf",
+  "HR & Payroll System": "quotations/Hr_payrole.pdf"
+};
+SYSTEMS.forEach(s => { if (QUOTE_PDFS[s.name]) s.pdf = QUOTE_PDFS[s.name]; });
+</script>
+
+<nav id="nav">
+  <div class="wrap nav-in">
+    <a href="#hero" class="brand"><img src="logo/logo_only.png" alt="Logo" style="width:40px;height:40px;border-radius:10px;object-fit:contain"><span>Amit <span style="color:var(--a)">MIS</span></span></a>
+    <div class="links" id="links">
+      <a href="#about">About</a><a href="#systems">Services</a><a href="#process">Process</a><a href="#savings">Savings</a><a href="#faq">FAQ</a><a href="#contact">Contact</a>
+    </div>
+    <div class="nav-r">
+      <button class="theme" id="themeBtn">Light mode</button>
+      <button class="burger" id="burger" aria-label="Menu">☰</button>
+    </div>
+  </div>
+</nav>
+
+<section id="hero">
+  <div class="wrap hero-grid">
+    <div class="rv">
+      <span class="eyebrow">MIS & Automation Specialist</span>
+      <h1>Automated systems that keep your business organised</h1>
+      <div class="role" id="role"></div>
+      <p class="lead">I build inventory, production, billing, HR, CRM and communication systems on Google Sheets, Apps Script, WhatsApp and API integrations — practical, reliable and easy for your team to use.</p>
+      <div class="hero-cta">
+        <a href="#systems" class="btn btn-p">View Services</a>
+        <a href="#contact" class="btn btn-o">Contact Me</a>
+      </div>
+    </div>
+    <div class="glass rv d2">
+      <img class="logo" src="logo/logo_only.png" alt="Logo" style="background:none;object-fit:contain">
+      <h3 id="heroName" style="font-size:1.3rem"></h3>
+      <p style="color:#93c5fd;font-weight:700;font-size:.95rem;margin-top:4px">MIS reporting · Process automation · Custom systems</p>
+      <ul>
+        <li>Clear data structure and live dashboards</li>
+        <li>WhatsApp, email and API automation</li>
+        <li>Training and support after delivery</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="strip"><span>Inventory</span>•<span>Production</span>•<span>Billing</span>•<span>Tasks</span>•<span>FMS</span>•<span>Chatbots</span>•<span>WhatsApp</span>•<span>Automail</span>•<span>API</span>•<span>AI Workflows</span>•<span>HR & Payroll</span>•<span>CRM</span>•<span>Finance</span>•<span>Cloud</span></div>
+
+<section id="video">
+  <div class="wrap">
+    <div class="rv center">
+      <span class="eyebrow">Live Demo</span>
+      <h2>See a system in action</h2>
+      <p class="lead">Watch a short walkthrough of how the system works, from data entry to live dashboard.</p>
+    </div>
+    <div class="stage rv">
+      <div class="screen" id="showcase">
+        <div class="play-ph">
+          <div class="play">▶</div>
+          <b>Demo video coming soon</b>
+          <small>The walkthrough will play here</small>
+        </div>
+      </div>
+    </div>
+    <div class="vfeat rv">
+      <div><b>Data entry</b><small>Enter once, use everywhere</small></div>
+      <div><b>Live dashboard</b><small>Reports update automatically</small></div>
+      <div><b>Alerts</b><small>WhatsApp and email reminders</small></div>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="alt">
+  <div class="wrap two">
+    <div class="rv">
+      <span class="eyebrow">About</span>
+      <h2>Clean data, clear reports, less manual work</h2>
+      <p class="lead">I help businesses replace scattered spreadsheets and manual follow-ups with structured systems, live dashboards and automatic communication, so your team focuses on decisions.</p>
+      <div class="stats">
+        <div><b>14+</b><small>System types</small></div>
+        <div><b>End-to-end</b><small>Build to support</small></div>
+        <div><b>Custom</b><small>Built to your process</small></div>
+      </div>
+    </div>
+    <div class="rv d2">
+      <h3 style="font-size:1.05rem">Core skills</h3>
+      <div class="chips"><span>Google Sheets</span><span>Apps Script</span><span>MIS Dashboards</span><span>WhatsApp API</span><span>Automail</span><span>REST APIs</span><span>Process Automation</span><span>Data Validation</span><span>Access Control</span><span>Chatbots</span><span>Reporting</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="systems">
+  <div class="wrap">
+    <div class="rv center">
+      <span class="eyebrow">Where I Deliver</span>
+      <h2>Systems I build for businesses</h2>
+      <p class="lead">Select any system to see its briefing, features, sample screens and price.</p>
+    </div>
+    <div class="grid" id="grid"></div>
+  </div>
+</section>
+
+<section id="process" class="alt">
+  <div class="wrap">
+    <div class="rv center"><span class="eyebrow">How It Works</span><h2>From requirement to live system</h2></div>
+    <div class="steps">
+      <div class="step rv"><b>STEP 01</b><h3>Discuss</h3><p>Understand your process, problems and goals.</p></div>
+      <div class="step rv d1"><b>STEP 02</b><h3>Design</h3><p>Plan data structure, workflow, dashboards and user roles.</p></div>
+      <div class="step rv d2"><b>STEP 03</b><h3>Build & Test</h3><p>Develop in stages and verify each part with you.</p></div>
+      <div class="step rv d3"><b>STEP 04</b><h3>Deliver & Support</h3><p>Go live, train your team and keep improving.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="rv center"><span class="eyebrow">Why Work With Me</span><h2>Practical, reliable, supported</h2></div>
+    <div class="why">
+      <div class="rv"><h3>Fast delivery</h3><p>Clear milestones and quick iterations so you see progress early.</p></div>
+      <div class="rv d1"><h3>Secure access</h3><p>Role-based login and controlled access for your team.</p></div>
+      <div class="rv d2"><h3>Ongoing support</h3><p>Training, fixes and upgrades after go-live.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="me">
+  <div class="wrap two">
+    <div class="rv">
+      <span class="eyebrow">About Me</span>
+      <h2>Hi, I’m Amit</h2>
+      <p class="lead">I am an MIS & Automation Specialist with <b style="color:var(--txt)">6 years of hands-on experience</b>. I have designed systems for manufacturing units, real estate firms, retail stores and many other businesses. I turn manual registers, scattered spreadsheets and repeated follow-ups into structured systems that save time, reduce mistakes and give owners clear reports every day.</p>
+      <p class="lead" style="margin-top:12px">My approach is practical: I first understand how your team works, then build the system around it, train your staff and support you after go-live.</p>
+    </div>
+    <div class="photo rv"><img src="amit.jpg" alt="Amit — MIS & Automation Specialist" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="ph2">Your photo here<br><small>Upload the file as amit.jpg</small></div></div>
+    <div class="box rv d2">
+      <h3 style="font-size:1.1rem;margin-bottom:6px">What I offer</h3>
+      <ul class="tick">
+        <li>Custom business systems on Google Sheets & Apps Script</li>
+        <li>MIS dashboards and graphs for daily decisions</li>
+        <li>WhatsApp, email and API automation</li>
+        <li>Chatbots and AI-based workflows</li>
+        <li>Training, documentation and ongoing support</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <div class="rv center">
+      <span class="eyebrow">Experience</span>
+      <h2>6 years of building systems that work</h2>
+      <p class="lead">From the first requirement to daily use, I design, build, train and support systems for businesses across many sectors.</p>
+    </div>
+    <div class="xp rv">
+      <div><b>6 Years</b><small>Hands-on experience</small></div>
+      <div><b>Multi-sector</b><small>Manufacturing to retail</small></div>
+      <div><b>End-to-end</b><small>Design, build, train & support</small></div>
+      <div><b>Custom</b><small>Built around your process</small></div>
+    </div>
+    <div class="sectors">
+      <div class="sec rv"><span>🏭</span>Manufacturing units</div>
+      <div class="sec rv d1"><span>🏢</span>Real estate firms</div>
+      <div class="sec rv d2"><span>🏬</span>Retail & stores</div>
+      <div class="sec rv"><span>📦</span>Warehouses & trading</div>
+      <div class="sec rv d1"><span>🪵</span>Plywood & timber</div>
+      <div class="sec rv d2"><span>🧾</span>Billing & accounts</div>
+      <div class="sec rv"><span>👥</span>HR & staff management</div>
+      <div class="sec rv d1"><span>🤝</span>Sales & CRM</div>
+    </div>
+    <p class="note center" style="margin-top:22px">...and many more business types.</p>
+  </div>
+</section>
+
+<section id="savings" class="alt">
+  <div class="wrap">
+    <div class="rv center">
+      <span class="eyebrow">Savings Calculator</span>
+      <h2>How much can automation save you?</h2>
+      <p class="lead">Enter your current manual work. The calculator estimates your monthly and yearly savings and how soon the system pays for itself.</p>
+    </div>
+    <div class="calc rv">
+      <div class="calc-in">
+        <label class="field"><span>System</span><select id="cSys"></select></label>
+        <label class="field"><span>People doing the manual work</span><input id="cStaff" type="number" min="1" value="3"></label>
+        <label class="field"><span>Hours per day on manual work (each)</span><input id="cHours" type="number" min="0" step="0.5" value="3"></label>
+        <label class="field"><span>Monthly salary per person (₹)</span><input id="cSalary" type="number" min="0" value="18000"></label>
+        <label class="field"><span>Working days per month</span><input id="cDays" type="number" min="1" max="31" value="26"></label>
+        <label class="field"><span>Time saved after automation (%)</span><input id="cPct" type="number" min="0" max="100" value="70"></label>
+      </div>
+      <div class="calc-out">
+        <div class="res"><small>Hours saved per month</small><b id="rHours">–</b></div>
+        <div class="res"><small>Money saved per month</small><b id="rMonth">–</b></div>
+        <div class="res"><small>Money saved per year</small><b id="rYear">–</b></div>
+        <div class="res"><small>System pays back in (list price)</small><b id="rPay">–</b></div>
+      </div>
+    </div>
+    <p class="note center" style="margin-top:18px">Estimate only. Actual savings depend on your process. Formula: staff × hours × working days × saving % × hourly cost (salary ÷ working days ÷ 8).</p>
+  </div>
+</section>
+
+<section id="compare">
+  <div class="wrap">
+    <div class="rv center"><span class="eyebrow">Manual vs Automated</span><h2>What changes after automation</h2></div>
+    <div class="tbl-wrap rv">
+      <table class="cmp">
+        <tr><th>Area</th><th>Manual work</th><th>With automation</th></tr>
+        <tr><td>Data entry</td><td>Repeated typing in registers and files</td><td>Entered once, used everywhere</td></tr>
+        <tr><td>Accuracy</td><td>Errors and duplicates</td><td>Validated fields and rules</td></tr>
+        <tr><td>Reports</td><td>Built by hand, late</td><td>Live dashboards and MIS graphs</td></tr>
+        <tr><td>Follow-ups</td><td>Calls and messages remembered by staff</td><td>Automatic WhatsApp and email reminders</td></tr>
+        <tr><td>Access</td><td>Files shared without control</td><td>Role-based login for each user</td></tr>
+        <tr><td>Dependency</td><td>Work stops when a person is absent</td><td>Process runs on the system</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section id="industries" class="alt">
+  <div class="wrap center">
+    <span class="eyebrow">Industries</span>
+    <h2>Who I can help</h2>
+    <p class="lead">Businesses that manage stock, orders, staff, customers or payments can benefit from automation.</p>
+    <div class="chips" style="justify-content:center;margin-top:26px"><span>Manufacturing</span><span>Real Estate</span><span>Retail Stores</span><span>Trading & Distribution</span><span>Warehouses</span><span>Retail Shops</span><span>Service Companies</span><span>Offices & Agencies</span><span>Plywood & Timber</span><span>Startups</span></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="cta-box rv">
+      <h2>Ready to automate your work?</h2>
+      <p>Tell me about your process. I will suggest the right system and send a quotation.</p>
+      <div class="hero-cta" style="justify-content:center">
+        <a href="#systems" class="btn btn-p">Browse Systems</a>
+        <a id="ctaWa" href="#" target="_blank" rel="noopener" class="btn btn-o">WhatsApp Me</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq" class="alt">
+  <div class="wrap" style="max-width:820px">
+    <div class="rv center"><span class="eyebrow">FAQ</span><h2>Frequently asked questions</h2></div>
+    <details class="rv"><summary>Do I need expensive software?</summary><p>Many systems run on Google Sheets and Apps Script, which keeps setup and running costs low.</p></details>
+    <details class="rv"><summary>Can you connect WhatsApp and email?</summary><p>Yes. I build WhatsApp integrations, automatic emails and chatbots for alerts, reminders and updates.</p></details>
+    <details class="rv"><summary>Can the system be customised?</summary><p>Yes. Every system is designed around your process, fields, roles and reports.</p></details>
+    <details class="rv"><summary>How do I get a quotation?</summary><p>Open any system, click Get Quotation, fill in your details and download the PDF. You can also contact me on WhatsApp or email.</p></details>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap contact-grid">
+    <div class="rv">
+      <span class="eyebrow">Contact</span>
+      <h2>Let’s discuss your requirement</h2>
+      <p class="lead">Share your process and I will suggest the right system and an estimate.</p>
+      <div class="c-list">
+        <a class="c-item" href="mailto:info@bizautosetup.com"><div class="c-ico">✉</div><div><small>Email</small><b>info@bizautosetup.com</b></div></a>
+        <a class="c-item" id="waLink" href="#" target="_blank" rel="noopener"><div class="c-ico">✆</div><div><small>WhatsApp / Mobile</small><b>+91 98557 23648</b></div></a>
+      </div>
+    </div>
+    <form class="msg rv d2" id="msgForm">
+      <div id="formNotice" class="notice" hidden>
+        <span id="noticeIcon" class="notice-icon">✓</span>
+        <div><b id="noticeTitle"></b><p id="noticeText"></p></div>
+        <button id="noticeClose" type="button" aria-label="Close">×</button>
+      </div>
+      <input id="fName" placeholder="Your name" required>
+      <input id="fPhone" placeholder="Your phone / WhatsApp" required>
+      <input id="fEmail" type="email" placeholder="Your email" required>
+      <select id="fService"><option value="">Select a system</option></select>
+      <textarea id="fMsg" rows="4" placeholder="Briefly describe your requirement"></textarea>
+      <button class="btn btn-p" type="submit">Send Request</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <b>Amit — MIS & Automation Specialist</b>
+    <div>Mobile: 9855723648 · info@bizautosetup.com</div>
+    <div class="social" id="social"></div>
+    <div>© <span id="yr"></span> Amit — MIS & Automation Specialist. All Rights Reserved.</div>
+  </div>
+</footer>
+
+<a id="top" href="#hero" aria-label="Back to top">↑</a>
+<a id="wa" href="#" target="_blank" rel="noopener" aria-label="WhatsApp">✆</a>
+
+<!-- SYSTEM DETAIL -->
+<div class="modal" id="dModal" role="dialog" aria-modal="true">
+  <div class="sheet">
+    <button class="x" data-close aria-label="Close">×</button>
+    <span class="eyebrow" id="dIco"></span>
+    <h2 id="dName"></h2>
+    <div class="price" id="dPrice"></div>
+    <p class="lead" id="dBrief" style="max-width:none"></p>
+    <h4>Key features</h4>
+    <ul id="dFeat"></ul>
+    <h4>Sample screens</h4>
+    <div class="gal" id="dGal"></div>
+    <div class="btns">
+      <button class="btn btn-p" id="dQuote">Get Quotation (PDF)</button>
+      <a class="btn btn-o" id="dWa" href="#" target="_blank" rel="noopener">Enquire on WhatsApp</a>
+    </div>
+  </div>
+</div>
+
+<!-- QUOTATION GATE -->
+<div class="modal" id="qModal" role="dialog" aria-modal="true">
+  <div class="sheet">
+    <button class="x" data-close aria-label="Close">×</button>
+    <span class="eyebrow">Quotation</span>
+    <h2 id="qTitle"></h2>
+    <p class="note" style="margin-top:4px">Please enter your details to download the quotation.</p>
+    <form id="qForm">
+      <div class="row" style="margin-top:14px">
+        <label class="field"><span>Client name <em>*</em></span><input id="qClient" required placeholder="Full name"></label>
+        <label class="field"><span>Company name <em>*</em></span><input id="qCompany" required placeholder="Company / firm"></label>
+      </div>
+      <div class="row" style="margin-top:12px">
+        <label class="field"><span>Email ID <em>*</em></span><input id="qEmail" type="email" required placeholder="you@company.com"></label>
+        <label class="field"><span>Contact number <em>*</em></span><input id="qPhone" type="tel" required pattern="[0-9+ ]{10,15}" placeholder="Mobile / WhatsApp"></label>
+      </div>
+      <label class="field" style="margin-top:12px"><span>Requirement (optional)</span><textarea id="qScope" rows="3" placeholder="Extra features or scope"></textarea></label>
+      <div class="btns">
+        <button class="btn btn-p" type="submit">Download Quotation PDF</button>
+      </div>
+    </form>
+    <div id="qDone" style="display:none">
+      <div class="ok">Thank you! Your quotation is downloading. You can also share your details with me directly.</div>
+      <div class="btns"><a class="btn btn-o" id="qNotify" href="#" target="_blank" rel="noopener">Send details on WhatsApp</a></div>
+    </div>
+    <p class="note" id="qNote"></p>
+  </div>
+</div>
+
+<div id="lb"><button aria-label="Close" id="lbClose">×</button><img id="lbImg" alt="Sample screen"></div>
+
+<script>
+const $ = id => document.getElementById(id);
+const esc = t => String(t).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const inr = n => "₹ " + Number(n).toLocaleString("en-IN");
+const waUrl = t => "https://wa.me/" + CONFIG.waCode + "?text=" + encodeURIComponent(t);
+
+$("yr").textContent = CONFIG.year;
+document.title = CONFIG.brand;
+$("heroName").textContent = CONFIG.name;
+$("waLink").href = waUrl(CONFIG.whatsappMsg);
+$("wa").href = waUrl(CONFIG.whatsappMsg);
+$("ctaWa").href = waUrl(CONFIG.whatsappMsg);
+
+/* ---------- Grid + service select ---------- */
+const grid = $("grid"), sel = $("fService");
+let cur = 0;
+SYSTEMS.forEach((s, i) => {
+  const b = document.createElement("button");
+  b.className = "sys rv";
+  b.innerHTML = `<div class="ico">${s.ico}</div><h3>${esc(s.name)}</h3><p>${esc(s.short)}</p>
+    <div class="foot"><span><em>${inr(s.price)}</em> <span style="color:var(--mut);font-weight:600">onwards</span></span><span style="color:var(--a)">View →</span></div>`;
+  b.onclick = () => openDetail(i);
+  grid.appendChild(b);
+  sel.appendChild(new Option(s.name, s.name));
+});
+
+/* ---------- Detail modal ---------- */
+function shots(s){
+  return s.imgs.map((src, n) => src
+    ? `<div class="shot"><img src="${esc(src)}" alt="${esc(s.name)} screen ${n+1}" data-zoom onerror="this.parentElement.textContent='Screen ${n+1} not available'"></div>`
+    : `<div class="shot">${s.ico}<br>Sample screen ${n+1}</div>`).join("");
+}
+function openDetail(i){
+  cur = i;
+  const s = SYSTEMS[i];
+  $("dIco").textContent = s.ico + " System";
+  $("dName").textContent = s.name;
+  $("dPrice").innerHTML = `${inr(s.price)} <small>indicative, onwards</small>`;
+  $("dBrief").textContent = s.brief;
+  $("dFeat").innerHTML = s.features.map(f => `<li>${esc(f)}</li>`).join("");
+  $("dGal").innerHTML = shots(s);
+  $("dWa").href = waUrl("Hello Amit, I'm interested in: " + s.name);
+  open("dModal");
+}
+$("dQuote").onclick = () => { close("dModal"); openQuote(cur); };
+
+/* ---------- Quotation modal ---------- */
+function openQuote(i){
+  cur = i;
+  $("qTitle").textContent = SYSTEMS[i].name;
+  $("qForm").style.display = "";
+  $("qDone").style.display = "none";
+  $("qNote").textContent = "";
+  open("qModal");
+}
+
+function quoteDocument(d){
+  const s = SYSTEMS[cur], amt = s.price, gst = Math.round(amt * 0.18);
+  const date = new Date().toLocaleDateString("en-IN", {day:"2-digit", month:"short", year:"numeric"});
+  return `<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Quotation - ${esc(s.name)}</title>
+  <style>body{font-family:Arial,sans-serif;padding:40px;color:#1f2937}h1{color:#1e3a8a;margin:0}table{width:100%;border-collapse:collapse;margin-top:18px}td,th{border:1px solid #d1d5db;padding:10px;text-align:left}th{background:#eef3fb;width:30%}.f{margin-top:28px;font-size:12px;color:#6b7280}</style>
+  </head><body><h1>${esc(CONFIG.brand)}</h1><p>Mobile: ${CONFIG.phone} · ${CONFIG.email} · Date: ${date}</p>
+  <h2>Quotation</h2>
+  <table>
+    <tr><th>Client</th><td>${esc(d.client)}</td></tr>
+    <tr><th>Company</th><td>${esc(d.company)}</td></tr>
+    <tr><th>Email</th><td>${esc(d.email)}</td></tr>
+    <tr><th>Contact</th><td>${esc(d.phone)}</td></tr>
+    <tr><th>System</th><td>${esc(s.name)}</td></tr>
+    ${d.scope ? `<tr><th>Scope</th><td>${esc(d.scope)}</td></tr>` : ""}
+    <tr><th>Amount</th><td>${inr(amt)}</td></tr>
+    <tr><th>GST (18%)</th><td>${inr(gst)}</td></tr>
+    <tr><th>Total</th><td><b>${inr(amt + gst)}</b></td></tr>
+  </table>
+  <p class="f">Indicative price, subject to final requirement. © ${CONFIG.year} ${esc(CONFIG.brand)}. All Rights Reserved.</p></body></html>`;
+}
+
+/* Downloads a PDF. Tries fetch+blob first (hosting), falls back to direct link. */
+async function downloadPdf(path){
+  const fileName = path.split("/").pop();
+  let href = path;
+  let blobUrl = null;
+  try {
+    const res = await fetch(path, { cache: "no-store" });
+    if (!res.ok) throw new Error(`PDF nahi mili (${res.status}): ${path}`);
+    const blob = await res.blob();
+    blobUrl = URL.createObjectURL(blob);
+    href = blobUrl;
+  } catch (err) {
+    if (String(err.message).startsWith("PDF nahi mili")) throw err;
+    // file:// ya CORS issue: direct link se download karenge
+  }
+  const a = document.createElement("a");
+  a.href = href;
+  a.download = fileName;
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+  if (blobUrl) setTimeout(() => URL.revokeObjectURL(blobUrl), 4000);
+}
+
+$("qForm").addEventListener("submit", async e => {
+  e.preventDefault();
+  const s = SYSTEMS[cur];
+  const btn = $("qForm").querySelector('button[type="submit"]');
+  const oldTxt = btn.textContent;
+
+  const d = {
+    client: $("qClient").value.trim(),
+    company: $("qCompany").value.trim(),
+    email: $("qEmail").value.trim(),
+    phone: $("qPhone").value.trim(),
+    scope: $("qScope").value.trim()
+  };
+
+  $("qNotify").href = waUrl(
+    `Quotation request\nSystem: ${s.name}\nClient: ${d.client}\nCompany: ${d.company}\nEmail: ${d.email}\nContact: ${d.phone}\n${d.scope ? "Requirement: " + d.scope : ""}`
+  );
+
+  // Sheet mein quotation request (background mein, download ko block nahi karega)
+  fetch(SHEET_API_URL, {
+    method: "POST",
+    mode: "no-cors",
+    body: new URLSearchParams({
+      type: "Quotation",
+      name: d.client,
+      phone: d.phone,
+      email: d.email,
+      service: s.name,
+      message: `Company: ${d.company} | Email: ${d.email} | ${d.scope}`
+    })
+  }).catch(() => {});
+
+  btn.disabled = true;
+  btn.textContent = "Preparing...";
+  $("qNote").textContent = "";
+
+  try {
+    if (s.pdf) {
+      await downloadPdf(s.pdf);
+    } else {
+      const w = window.open("", "_blank");
+      if (!w) throw new Error("Pop-up block hai. Pop-ups allow karke dobara try karo.");
+      w.document.write(quoteDocument(d));
+      w.document.close();
+      w.focus();
+      setTimeout(() => w.print(), 400);
+    }
+    $("qForm").style.display = "none";
+    $("qDone").style.display = "block";
+  } catch (err) {
+    $("qNote").textContent = "Error: " + err.message;
+  } finally {
+    btn.disabled = false;
+    btn.textContent = oldTxt;
+  }
+});
+
+/* ---------- Contact form -> Google Sheet ---------- */
+const contactForm = $("msgForm");
+const notice = $("formNotice");
+const noticeTitle = $("noticeTitle");
+const noticeText = $("noticeText");
+const noticeIcon = $("noticeIcon");
+const closeNotice = $("noticeClose");
+let noticeTimer;
+
+function showNotice(type, title, message){
+  clearTimeout(noticeTimer);
+  notice.hidden = false;
+  notice.classList.remove("show", "error");
+  notice.classList.toggle("error", type === "error");
+  noticeIcon.textContent = type === "success" ? "✓" : "!";
+  noticeTitle.textContent = title;
+  noticeText.textContent = message;
+  requestAnimationFrame(() => requestAnimationFrame(() => notice.classList.add("show")));
+  notice.scrollIntoView({ behavior: "smooth", block: "nearest" });
+  noticeTimer = setTimeout(() => {
+    notice.classList.remove("show");
+    setTimeout(() => { if (!notice.classList.contains("show")) notice.hidden = true; }, 350);
+  }, 6000);
+}
+
+closeNotice.addEventListener("click", () => {
+  clearTimeout(noticeTimer);
+  notice.classList.remove("show");
+  setTimeout(() => notice.hidden = true, 350);
+});
+
+contactForm.addEventListener("submit", async e => {
+  e.preventDefault();
+  const button = contactForm.querySelector('button[type="submit"]');
+  const oldText = button.textContent;
+  button.disabled = true;
+  button.textContent = "Sending...";
+
+  const params = new URLSearchParams({
+    type: "Contact",
+    name: $("fName").value.trim(),
+    phone: $("fPhone").value.trim(),
+    email: $("fEmail").value.trim(),
+    service: $("fService").value,
+    message: $("fMsg").value.trim()
+  });
+
+  try {
+    await fetch(SHEET_API_URL, { method: "POST", mode: "no-cors", body: params });
+    showNotice("success", "Thank you for reaching out!",
+      "Your request has been sent. We appreciate your interest.");
+    contactForm.reset();
+  } catch (err) {
+    showNotice("error", "Unable to submit", "Something went wrong. Please try again in a moment.");
+  } finally {
+    button.disabled = false;
+    button.textContent = oldText;
+  }
+});
+
+/* ---------- Modals + lightbox ---------- */
+function open(id){ $(id).classList.add("open"); document.body.style.overflow = "hidden"; }
+function close(id){ $(id).classList.remove("open"); if (!document.querySelector(".modal.open")) document.body.style.overflow = ""; }
+document.querySelectorAll(".modal").forEach(m => m.addEventListener("click", e => {
+  if (e.target === m || e.target.hasAttribute("data-close")) close(m.id);
+}));
+document.addEventListener("click", e => {
+  const img = e.target.closest("[data-zoom]");
+  if (img && img.src) { $("lbImg").src = img.src; $("lb").classList.add("open"); }
+  if (e.target.id === "lb" || e.target.id === "lbClose") $("lb").classList.remove("open");
+});
+document.addEventListener("keydown", e => {
+  if (e.key === "Escape") {
+    document.querySelectorAll(".modal.open").forEach(m => close(m.id));
+    $("lb").classList.remove("open");
+  }
+});
+
+/* ---------- Savings calculator ---------- */
+SYSTEMS.forEach((s, i) => $("cSys").appendChild(new Option(s.name, i)));
+function calc(){
+  const staff = +$("cStaff").value || 0, hrs = +$("cHours").value || 0,
+        sal = +$("cSalary").value || 0, days = +$("cDays").value || 0;
+  const pct = Math.min(100, Math.max(0, +$("cPct").value || 0)) / 100;
+  const price = SYSTEMS[+$("cSys").value].price;
+  const hoursM = staff * hrs * days * pct;
+  const hourly = days > 0 ? sal / (days * 8) : 0;
+  const monthly = hoursM * hourly;
+  $("rHours").textContent = Math.round(hoursM).toLocaleString("en-IN") + " hrs";
+  $("rMonth").textContent = inr(Math.round(monthly));
+  $("rYear").textContent = inr(Math.round(monthly * 12));
+  $("rPay").textContent = monthly > 0 ? Math.ceil(price / monthly) + " month(s)" : "–";
+}
+["cSys","cStaff","cHours","cSalary","cDays","cPct"].forEach(id => $(id).addEventListener("input", calc));
+calc();
+
+/* ---------- Scroll-to-top + nav shadow ---------- */
+addEventListener("scroll", () => {
+  $("top").classList.toggle("show", scrollY > 600);
+  $("nav").classList.toggle("scrolled", scrollY > 30);
+}, {passive:true});
+
+/* ---------- Social links ---------- */
+const SOCIAL = [
+  {n:"Instagram", u:CONFIG.instagram, svg:'<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>'},
+  {n:"LinkedIn", u:CONFIG.linkedin, svg:'<svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4V21H3zM9.5 9.75h3.8v1.6h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.1c0-1.22-.02-2.8-1.7-2.8-1.71 0-1.97 1.33-1.97 2.72V21h-4z"/></svg>'}
+];
+SOCIAL.forEach(s => {
+  const a = document.createElement("a");
+  a.href = s.u || "#"; a.target = "_blank"; a.rel = "noopener"; a.className = "soc";
+  a.title = s.n; a.setAttribute("aria-label", s.n); a.innerHTML = s.svg;
+  $("social").appendChild(a);
+});
+
+/* ---------- Demo video ---------- */
+const vid = CONFIG.showcaseVideo;
+if (vid) {
+  $("showcase").innerHTML = /\.(mp4|webm|ogg)$/i.test(vid)
+    ? `<video src="${esc(vid)}" controls playsinline preload="metadata"></video>`
+    : `<iframe src="${esc(vid)}" allowfullscreen loading="lazy" allow="accelerometer; autoplay; encrypted-media; picture-in-picture"></iframe>`;
+}
+
+/* ---------- Role typing animation ---------- */
+const roles = ["MIS Specialist", "Automation Expert", "Custom System Builder", "WhatsApp & API Integrator"];
+let ri = 0, ci = 0, del = false;
+(function type(){
+  const w = roles[ri];
+  $("role").textContent = w.slice(0, ci);
+  if (!del && ci < w.length) { ci++; setTimeout(type, 80); }
+  else if (del && ci > 0) { ci--; setTimeout(type, 40); }
+  else { del = !del; if (!del) ri = (ri + 1) % roles.length; setTimeout(type, del ? 1500 : 300); }
+})();
+
+/* ---------- Reveal on scroll ---------- */
+const io = new IntersectionObserver(es => es.forEach(en => {
+  if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); }
+}), {threshold:.12});
+function watch(){ document.querySelectorAll(".rv:not(.in)").forEach(el => io.observe(el)); }
+watch();
+new MutationObserver(watch).observe(document.body, {childList:true, subtree:true});
+
+/* ---------- Mobile menu + theme ---------- */
+$("burger").onclick = () => $("links").classList.toggle("open");
+document.querySelectorAll("#links a").forEach(a => a.addEventListener("click", () => $("links").classList.remove("open")));
+
+const root = document.documentElement;
+function syncTheme(){ $("themeBtn").textContent = root.getAttribute("data-theme") === "dark" ? "Light mode" : "Dark mode"; }
+$("themeBtn").onclick = () => {
+  root.setAttribute("data-theme", root.getAttribute("data-theme") === "dark" ? "light" : "dark");
+  syncTheme();
+};
+syncTheme();
+</script>
+</body>
+</html>
