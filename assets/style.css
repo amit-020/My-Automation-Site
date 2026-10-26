@@ -328,13 +328,110 @@ details p{color:var(--mut);margin-top:10px;font-size:.96rem}
 .bot-opts button:hover{border-color:var(--a)}
 
 /* ---------- footer + floating buttons ---------- */
-.foot{border-top:1px solid var(--line);padding:44px 0 calc(40px + env(safe-area-inset-bottom,0px));background:var(--bg);color:var(--mut);font-size:.92rem}
-.foot-in{display:grid;grid-template-columns:1.2fr 1fr;gap:24px 40px;align-items:start}
-.foot b{color:var(--txt);font-size:1rem}
-.foot p{margin-top:4px}
-.foot a{color:var(--a)}
-.foot .copy{grid-column:1/-1;border-top:1px solid var(--line);padding-top:18px;font-size:.85rem}
-@media(max-width:700px){.foot-in{grid-template-columns:1fr}}
+
+/* ---------- FOOTER ---------- */
+.foot {
+  width: 100%;
+  border-top: 1px solid var(--line);
+  padding: 44px 0 calc(40px + env(safe-area-inset-bottom, 0px));
+  background: var(--bg);
+  color: var(--mut);
+  font-size: .92rem;
+}
+
+/* Footer ko screen par zyada width do */
+.foot .wrap {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+/* Left and right layout */
+.foot-in {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px 40px;
+  align-items: start;
+}
+
+.foot b {
+  color: var(--txt);
+  font-size: 1rem;
+}
+
+.foot p {
+  margin-top: 4px;
+}
+
+.foot a {
+  color: var(--a);
+}
+
+/* LinkedIn and company details on left */
+.foot-in > div:first-child {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Mobile and email on right */
+.foot-contact {
+  justify-self: end;
+  text-align: right;
+}
+
+/* Copyright below both columns */
+.foot .copy {
+  grid-column: 1 / -1;
+  border-top: 1px solid var(--line);
+  padding-top: 18px;
+  font-size: .85rem;
+  text-align: center;
+}
+
+/* Mobile responsive */
+@media (max-width: 700px) {
+  .foot .wrap {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .foot-in {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .foot-contact {
+    justify-self: start;
+    text-align: left;
+  }
+
+  .foot .copy {
+    grid-column: 1;
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+
+  .rv {
+    opacity: 1;
+    transform: none;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 
 .fab{position:fixed;z-index:60;width:56px;height:56px;border-radius:50%;display:grid;place-items:center;box-shadow:0 14px 28px -12px rgba(0,0,0,.5);transition:transform .2s}
 .fab:hover{transform:translateY(-3px)}
