@@ -405,3 +405,23 @@ details p{color:var(--mut);margin-top:10px;font-size:.96rem}
   .foot-in{grid-template-columns:1fr;gap:24px}
   .foot-contact{justify-self:start;text-align:left}
 }
+/* ---------- Floating buttons: left se right shift (footer LinkedIn chhupe nahi) ---------- */
+.fab-top{
+  left:auto;
+  right:20px;
+  bottom:calc(92px + env(safe-area-inset-bottom,0px));
+}
+.fab-bot{
+  left:auto;
+  right:90px;
+  bottom:calc(22px + env(safe-area-inset-bottom,0px));
+}
+.bot{
+  left:auto;
+  right:20px;
+  bottom:calc(92px + env(safe-area-inset-bottom,0px));
+}
+@media(max-width:600px){
+  .bot{left:auto;right:12px;width:min(370px,calc(100vw - 24px))}
+  .fab-bot{right:88px}
+}
