@@ -495,3 +495,104 @@ details p{color:var(--mut);margin-top:10px;font-size:.96rem}
     scroll-behavior:auto;
   }
 }
+
+/* ---------- FIX: FLOATING BUTTONS ---------- */
+.fab {
+  position: fixed;
+  z-index: 1000;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 12px 26px -10px rgba(0,0,0,.3);
+  transition: transform .2s ease;
+}
+
+.fab:hover {
+  transform: translateY(-3px);
+}
+
+/* WhatsApp - bottom right */
+.fab-wa {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  background: #25d366;
+  color: #fff;
+  font-size: 1.6rem;
+  text-decoration: none;
+}
+
+/* Chatbot - bottom left */
+.fab-bot {
+  position: fixed;
+  left: 24px;
+  bottom: 24px;
+  background: linear-gradient(135deg,var(--a),var(--a2));
+  color: #fff;
+  border: 0;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+/* Back to top - above chatbot */
+.fab-top {
+  position: fixed;
+  left: 24px;
+  bottom: 96px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  color: var(--a);
+  font-size: 1.2rem;
+  z-index: 999;
+}
+
+/* Chatbot popup */
+.bot {
+  position: fixed;
+  left: 24px;
+  bottom: 96px;
+  z-index: 1002;
+  width: min(370px,calc(100vw - 48px));
+  max-height: min(540px,72vh);
+  display: flex;
+  flex-direction: column;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: 0 30px 60px -25px #000;
+  overflow: hidden;
+}
+
+/* Mobile */
+@media(max-width:600px) {
+  .fab {
+    width: 50px;
+    height: 50px;
+  }
+
+  .fab-wa {
+    right: 16px;
+    bottom: 18px;
+  }
+
+  .fab-bot {
+    left: 16px;
+    bottom: 18px;
+  }
+
+  .fab-top {
+    left: 16px;
+    bottom: 82px;
+  }
+
+  .bot {
+    left: 12px;
+    right: 12px;
+    bottom: 82px;
+    width: auto;
+  }
+}
+
