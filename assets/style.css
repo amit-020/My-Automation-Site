@@ -1437,3 +1437,21 @@ details p{
     width:auto;
   }
 }
+/* ---------- chatbot button fix ---------- */
+.fab-bot{
+  font-size:initial;
+  left:24px;
+  right:auto;
+  bottom:92px;
+  z-index:1001;
+  color:#fff;
+  background:linear-gradient(135deg,var(--a),var(--a2));
+}
+.fab-bot svg{width:26px;height:26px}
+
+.bot{
+  left:24px;
+  right:auto;
+  bottom:160px;
+  z-index:1002;
+}
