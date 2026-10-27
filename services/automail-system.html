@@ -3,6 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src &#x27;self&#x27;; img-src &#x27;self&#x27; data: https:; media-src &#x27;self&#x27; https:; frame-src https://www.youtube.com https://www.youtube-nocookie.com https://player.vimeo.com; style-src &#x27;self&#x27; https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src &#x27;self&#x27;; connect-src &#x27;self&#x27; https://script.google.com https://script.googleusercontent.com; form-action &#x27;self&#x27;; base-uri &#x27;self&#x27;; object-src &#x27;none&#x27;; frame-ancestors &#x27;self&#x27;">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="theme-color" content="#0a1122">
 <title>Automail System for Automatic Business Emails | Bizautosetup</title>
 <meta name="description" content="Automatic transactional and bulk emails triggered from your data, with templates and a complete send log.">
 <meta name="robots" content="index, follow">
@@ -13,20 +16,19 @@
 <meta property="og:description" content="Automatic transactional and bulk emails triggered from your data, with templates and a complete send log.">
 <meta property="og:url" content="https://www.bizautosetup.com/services/automail-system.html">
 <meta property="og:image" content="https://www.bizautosetup.com/logo/logo_only.png">
-<link rel="icon" type="image/png" sizes="48x48" href="https://www.bizautosetup.com/logo/logo_only.png">
-<link rel="apple-touch-icon" sizes="180x180" href="https://www.bizautosetup.com/logo/logo_only.png">
+<link rel="icon" type="image/png" href="../logo/logo_only.png">
+<link rel="apple-touch-icon" href="../logo/logo_only.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" href="../assets/style.css" as="style">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&amp;display=swap">
 <link rel="stylesheet" href="../assets/style.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" media="print" onload="this.media='all'">
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap"></noscript>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Service", "name": "Automail System", "serviceType": "Automail System", "description": "Automatic transactional and bulk emails triggered from your data, with templates and a complete send log.", "url": "https://www.bizautosetup.com/services/automail-system.html", "areaServed": "IN", "provider": {"@type": "ProfessionalService", "name": "Bizautosetup", "telephone": "+919855723648", "email": "info@bizautosetup.com", "url": "https://www.bizautosetup.com/"}}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Can I see whether an email was sent?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Every send is logged with date, recipient and status."}}]}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.bizautosetup.com/"}, {"@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.bizautosetup.com/#services"}, {"@type": "ListItem", "position": 3, "name": "Automail System", "item": "https://www.bizautosetup.com/services/automail-system.html"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"Automail System","serviceType":"Automail System","description":"Automatic transactional and bulk emails triggered from your data, with templates and a complete send log.","url":"https://www.bizautosetup.com/services/automail-system.html","areaServed":"IN","provider":{"@type":"ProfessionalService","name":"Bizautosetup","telephone":"+919855723648","email":"info@bizautosetup.com","url":"https://www.bizautosetup.com/"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can I see whether an email was sent?","acceptedAnswer":{"@type":"Answer","text":"Yes. Every send is logged with date, recipient and status."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.bizautosetup.com/"},{"@type":"ListItem","position":2,"name":"Services","item":"https://www.bizautosetup.com/#services"},{"@type":"ListItem","position":3,"name":"Automail System","item":"https://www.bizautosetup.com/services/automail-system.html"}]}</script>
 </head>
-<body data-wa="919855723648">
-<nav id="nav" class="nav">
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<nav id="nav" class="nav" aria-label="Main">
   <div class="wrap nav-in">
     <a class="brand" href="../index.html">
       <img src="../logo/logo_only.png" width="40" height="40" alt="Bizautosetup logo">
@@ -35,16 +37,18 @@
     <div class="links" id="links"><a href="../index.html#about">About</a><a href="../index.html#services">Services</a><a href="../index.html#gallery">Gallery</a><a href="../index.html#process">Process</a><a href="../index.html#savings">Savings</a><a href="../index.html#faq">FAQ</a><a href="../index.html#contact">Contact</a></div>
     <div class="nav-r">
       <button class="theme" id="themeBtn" type="button">Light mode</button>
-      <button class="burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false">☰</button>
+      <button class="burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="links">
+        <span aria-hidden="true">&#9776;</span>
+      </button>
     </div>
   </div>
 </nav>
-<main>
+<main id="main">
 
 <header class="svc-hero">
   <div class="wrap">
     <nav class="crumbs" aria-label="Breadcrumb">
-      <a href="../index.html">Home</a> <span>/</span> <a href="../index.html#services">Services</a> <span>/</span> <span>Automail System</span>
+      <a href="../index.html">Home</a> <span aria-hidden="true">/</span> <a href="../index.html#services">Services</a> <span aria-hidden="true">/</span> <span>Automail System</span>
     </nav>
     <span class="cat-tag">Communication</span>
     <h1>Automail System for Automatic Business Emails</h1>
@@ -52,7 +56,7 @@
     <p class="price">Quotation on request</p>
     <div class="row mt">
       <a class="btn btn-p" href="#quote">Request quotation</a>
-      <a class="btn btn-o" href="https://wa.me/919855723648?text=Hello%2C%20I%20am%20interested%20in%3A%20Automail%20System" target="_blank" rel="noopener">Ask on WhatsApp</a>
+      <a class="btn btn-o" href="https://wa.me/919855723648?text=Hello%2C%20I%20am%20interested%20in%3A%20Automail%20System" target="_blank" rel="noopener noreferrer">Ask on WhatsApp</a>
     </div>
   </div>
 </header>
@@ -70,21 +74,21 @@
     <div class="box rv d2" id="quote">
       <h3>Get a quotation</h3>
       <p class="note">Pricing depends on your process. Share your requirement and I will send a quotation.</p>
-      <form class="lead" data-type="Quotation" data-endpoint="https://script.google.com/macros/s/AKfycbxuiLq3i9d2do13jfHXIUSXjS0FTawNYO3Uya5i0MqjoWNBOaWx5CQTZGuD8KE-ZWob/exec">
+      <form class="lead" data-type="Quotation" data-endpoint="https://script.google.com/macros/s/AKfycbxuiLq3i9d2do13jfHXIUSXjS0FTawNYO3Uya5i0MqjoWNBOaWx5CQTZGuD8KE-ZWob/exec" novalidate>
   <div class="notice" role="status" hidden>
-    <span class="ni">✓</span>
-    <div><b class="nt"></b><p class="np"></p><a class="nl" target="_blank" rel="noopener" hidden>Message on WhatsApp</a></div>
+    <span class="ni" aria-hidden="true">&#10003;</span>
+    <div><b class="nt"></b><p class="np"></p><a class="nl" target="_blank" rel="noopener noreferrer" hidden>Message on WhatsApp</a></div>
   </div>
   <input type="hidden" name="service" value="Automail System">
   <div class="grid2">
-    <label class="field"><span>Name</span><input name="name" required placeholder="Your name" autocomplete="name"></label>
-    <label class="field"><span>Company (optional)</span><input name="company" placeholder="Company / firm"></label>
+    <label class="field"><span>Name</span><input name="name" required maxlength="80" placeholder="Your name" autocomplete="name"></label>
+    <label class="field"><span>Company (optional)</span><input name="company" maxlength="120" placeholder="Company / firm"></label>
   </div>
   <div class="grid2">
-    <label class="field"><span>Phone / WhatsApp</span><input name="phone" type="tel" required placeholder="10-digit number" pattern="[0-9+ ]{10,15}" autocomplete="tel"></label>
-    <label class="field"><span>Email</span><input name="email" type="email" required placeholder="you@example.com" autocomplete="email"></label>
+    <label class="field"><span>Phone / WhatsApp</span><input name="phone" type="tel" required placeholder="10-digit number" pattern="[0-9+ ]{{10,15}}" autocomplete="tel"></label>
+    <label class="field"><span>Email</span><input name="email" type="email" required maxlength="120" placeholder="you@example.com" autocomplete="email"></label>
   </div>
-  <label class="field"><span>Requirement</span><textarea name="message" rows="4" placeholder="Requirement (optional): extra features, users, scope"></textarea></label>
+  <label class="field"><span>Requirement</span><textarea name="message" rows="4" maxlength="2000" placeholder="Requirement (optional): extra features, users, scope"></textarea></label>
   <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
   <button class="btn btn-p btn-block" type="submit">Request quotation</button>
   <p class="fine">Your details are used only to reply to your request.</p>
@@ -100,7 +104,7 @@
 <section class="section">
   <div class="wrap">
     <div class="sec-head rv"><span class="eyebrow">Related systems</span><h2>You may also need</h2></div>
-    <div class="grid"><a class="card rv" href="chatbot-development.html" data-cat="comm" data-search="chat bot development chatbots for faqs, lead capture and queries. website and whatsapp chatbots that answer faqs, capture leads and route complex queries to your team with full conversation history. faq automation lead capture query routing to staff conversation analytics"><span class="ico">🤖</span><span class="cat-tag">Communication</span><h3>Chat Bot Development</h3><p>Chatbots for FAQs, lead capture and queries.</p><span class="go">View details and samples →</span></a><a class="card rv" href="whatsapp-integration.html" data-cat="comm" data-search="whatsapp integration automated alerts, reminders and updates. automated whatsapp alerts for orders, payments and reminders, sent directly from your google sheet or business system. order and payment alerts automated reminders bulk messaging delivery status tracking"><span class="ico">💬</span><span class="cat-tag">Communication</span><h3>WhatsApp Integration</h3><p>Automated alerts, reminders and updates.</p><span class="go">View details and samples →</span></a><a class="card rv" href="inventory-management-system.html" data-cat="ops" data-search="inventory management system stock, vendors, deploy forms and live dashboards. stock-in and stock-out entries, vendor master, deploy forms and live mis dashboards built on google sheets. custom setup for stores and warehouses. master item and vendor lists stock-in and stock-out entries deploy form and live dashboard mis graphs and reports"><span class="ico">📦</span><span class="cat-tag">Operations</span><h3>Inventory Management System</h3><p>Stock, vendors, deploy forms and live dashboards.</p><span class="go">View details and samples →</span></a><a class="card rv" href="production-fms-flow-system.html" data-cat="ops" data-search="production &amp; fms flow system order → processing → qc → packaging → dispatch tracking. track every order through processing, qc, packaging and dispatch with id-based tracking, stage history and production mis reports. stage-wise order tracking qc and packaging checkpoints dispatch status and history production mis reports"><span class="ico">🏭</span><span class="cat-tag">Operations</span><h3>Production &amp; FMS Flow System</h3><p>Order → Processing → QC → Packaging → Dispatch tracking.</p><span class="go">View details and samples →</span></a><a class="card rv" href="billing-challan-system.html" data-cat="fin" data-search="billing &amp; challan system invoices, challans and payment tracking. generate invoices and delivery challans in a consistent format, with payment and due tracking built on google sheets and apps script. invoice and challan generation payment and due tracking printable documents customer-wise reports"><span class="ico">🧾</span><span class="cat-tag">Sales &amp; Finance</span><h3>Billing &amp; Challan System</h3><p>Invoices, challans and payment tracking.</p><span class="go">View details and samples →</span></a><a class="card rv" href="task-checklist-management.html" data-cat="ops" data-search="task &amp; checklist management assign tasks, recurring checklists and reminders. assign tasks, run recurring checklists and get automatic due and overdue email reminders. completion tracking for every team member. task delegation recurring checklists due-soon and overdue emails completion tracking"><span class="ico">✅</span><span class="cat-tag">Operations</span><h3>Task &amp; Checklist Management</h3><p>Assign tasks, recurring checklists and reminders.</p><span class="go">View details and samples →</span></a></div>
+    <div class="grid"><a class="card rv" href="chatbot-development.html" data-cat="comm" data-search="chat bot development chatbots for faqs, lead capture and queries. website and whatsapp chatbots that answer faqs, capture leads and route complex queries to your team with full conversation history. faq automation lead capture query routing to staff conversation analytics"><span class="ico" aria-hidden="true">🤖</span><span class="cat-tag">Communication</span><h3>Chat Bot Development</h3><p>Chatbots for FAQs, lead capture and queries.</p><span class="go">View details and samples &rarr;</span></a><a class="card rv" href="whatsapp-integration.html" data-cat="comm" data-search="whatsapp integration automated alerts, reminders and updates. automated whatsapp alerts for orders, payments and reminders, sent directly from your google sheet or business system. order and payment alerts automated reminders bulk messaging delivery status tracking"><span class="ico" aria-hidden="true">💬</span><span class="cat-tag">Communication</span><h3>WhatsApp Integration</h3><p>Automated alerts, reminders and updates.</p><span class="go">View details and samples &rarr;</span></a><a class="card rv" href="inventory-management-system.html" data-cat="ops" data-search="inventory management system stock, vendors, deploy forms and live dashboards. stock-in and stock-out entries, vendor master, deploy forms and live mis dashboards built on google sheets. custom setup for stores and warehouses. master item and vendor lists stock-in and stock-out entries deploy form and live dashboard mis graphs and reports"><span class="ico" aria-hidden="true">📦</span><span class="cat-tag">Operations</span><h3>Inventory Management System</h3><p>Stock, vendors, deploy forms and live dashboards.</p><span class="go">View details and samples &rarr;</span></a><a class="card rv" href="production-fms-flow-system.html" data-cat="ops" data-search="production &amp; fms flow system order → processing → qc → packaging → dispatch tracking. track every order through processing, qc, packaging and dispatch with id-based tracking, stage history and production mis reports. stage-wise order tracking qc and packaging checkpoints dispatch status and history production mis reports"><span class="ico" aria-hidden="true">🏭</span><span class="cat-tag">Operations</span><h3>Production &amp; FMS Flow System</h3><p>Order → Processing → QC → Packaging → Dispatch tracking.</p><span class="go">View details and samples &rarr;</span></a><a class="card rv" href="billing-challan-system.html" data-cat="fin" data-search="billing &amp; challan system invoices, challans and payment tracking. generate invoices and delivery challans in a consistent format, with payment and due tracking built on google sheets and apps script. invoice and challan generation payment and due tracking printable documents customer-wise reports"><span class="ico" aria-hidden="true">🧾</span><span class="cat-tag">Sales &amp; Finance</span><h3>Billing &amp; Challan System</h3><p>Invoices, challans and payment tracking.</p><span class="go">View details and samples &rarr;</span></a><a class="card rv" href="task-checklist-management.html" data-cat="ops" data-search="task &amp; checklist management assign tasks, recurring checklists and reminders. assign tasks, run recurring checklists and get automatic due and overdue email reminders. completion tracking for every team member. task delegation recurring checklists due-soon and overdue emails completion tracking"><span class="ico" aria-hidden="true">✅</span><span class="cat-tag">Operations</span><h3>Task &amp; Checklist Management</h3><p>Assign tasks, recurring checklists and reminders.</p><span class="go">View details and samples &rarr;</span></a></div>
   </div>
 </section>
 
@@ -110,50 +114,50 @@
     <div class="foot-left">
       <b>Bizautosetup</b>
       <p>Amit, MIS &amp; Automation Specialist</p>
-      <div class="social"><a class="soc" href="https://www.linkedin.com/in/amit-gautam-2b513436a/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4V21H3V9.75zm6.5 0h3.8v1.5h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.1c0-1.22-.02-2.8-1.7-2.8-1.71 0-1.97 1.33-1.97 2.72V21h-4V9.75z"/></svg></a></div>
+      <div class="social"><a class="soc" href="https://www.linkedin.com/in/amit-gautam-2b513436a/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true" focusable="false"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4V21H3V9.75zm6.5 0h3.8v1.5h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.1c0-1.22-.02-2.8-1.7-2.8-1.71 0-1.97 1.33-1.97 2.72V21h-4V9.75z"/></svg></a></div>
     </div>
     <div class="foot-contact">
       <p>Mobile: <a href="tel:+919855723648">+91 98557 23648</a></p>
       <p>Email: <a href="mailto:info@bizautosetup.com">info@bizautosetup.com</a></p>
     </div>
-    <div class="copy">© 2026 Bizautosetup. All rights reserved.</div>
+    <div class="copy">&copy; 2026 Bizautosetup. All rights reserved.</div>
   </div>
 </footer>
 
-<a id="wa" class="fab fab-wa" href="https://wa.me/919855723648?text=Hello%20Amit%2C%20I%20would%20like%20to%20discuss%20an%20automation%20project." target="_blank" rel="noopener" aria-label="WhatsApp chat">✆</a>
-<a id="top" class="fab fab-top" href="#" aria-label="Back to top" hidden>↑</a>
+<a id="wa" class="fab fab-wa" href="https://wa.me/919855723648?text=Hello%20Amit%2C%20I%20would%20like%20to%20discuss%20an%20automation%20project." target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp"><svg viewBox="0 0 24 24" width="28" height="28" fill="#fff" aria-hidden="true" focusable="false"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></a>
+<a id="top" class="fab fab-top" href="#" aria-label="Back to top" hidden><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 19V5M5 12l7-7 7 7"/></svg></a>
 
-<button id="botBtn" class="fab fab-bot" type="button" aria-label="Open chat assistant" aria-expanded="false"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6A8.4 8.4 0 0 1 12.5 3h.5a8.5 8.5 0 0 1 8 8z"/><circle cx="8.5" cy="11.5" r="1" fill="currentColor"/><circle cx="12" cy="11.5" r="1" fill="currentColor"/><circle cx="15.5" cy="11.5" r="1" fill="currentColor"/></svg></button>
+<button id="botBtn" class="fab fab-bot" type="button" aria-label="Open chat assistant" aria-expanded="false" aria-controls="bot"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6A8.4 8.4 0 0 1 12.5 3h.5a8.5 8.5 0 0 1 8 8z"/><circle cx="8.5" cy="11.5" r="1" fill="currentColor"/><circle cx="12" cy="11.5" r="1" fill="currentColor"/><circle cx="15.5" cy="11.5" r="1" fill="currentColor"/></svg></button>
 <div id="bot" class="bot" role="dialog" aria-label="Bizautosetup assistant" hidden>
   <div class="bot-head">
     <div><b>Bizautosetup Assistant</b><small>Quick answers</small></div>
-    <button id="botClose" class="icon-btn light" type="button" aria-label="Close chat">×</button>
+    <button id="botClose" class="icon-btn light" type="button" aria-label="Close chat">&times;</button>
   </div>
   <div id="botLog" class="bot-log" aria-live="polite"></div>
   <div id="botOpts" class="bot-opts"></div>
 </div>
 
-<div class="modal" id="gm" role="dialog" aria-modal="true" aria-labelledby="gmTitle">
+<div class="modal" id="gm" role="dialog" aria-modal="true" aria-labelledby="gmTitle" hidden>
   <div class="sheet">
     <div class="sheet-head">
       <div><h3 id="gmTitle">Sample screens</h3><small id="gmSub"></small></div>
-      <button class="icon-btn" type="button" data-close aria-label="Close">×</button>
+      <button class="icon-btn" type="button" data-close aria-label="Close">&times;</button>
     </div>
     <div class="sheet-body"><div class="gal-all" id="gmGrid"></div></div>
   </div>
 </div>
 
-<div id="lb" role="dialog" aria-modal="true" aria-label="Image viewer">
+<div id="lb" role="dialog" aria-modal="true" aria-label="Image viewer" hidden>
   <div class="lb-top">
     <div class="lb-cap" id="lbCap"></div>
     <div class="lb-tools">
       <button type="button" id="lbZoom" title="Zoom (Z)">Zoom</button>
-      <button type="button" id="lbClose" title="Close (Esc)" aria-label="Close">✕</button>
+      <button type="button" id="lbClose" title="Close (Esc)" aria-label="Close">&times;</button>
     </div>
   </div>
   <div class="lb-stage" id="lbStage"><img id="lbImg" alt=""></div>
-  <button class="lb-nav lb-prev" id="lbPrev" type="button" aria-label="Previous image">‹</button>
-  <button class="lb-nav lb-next" id="lbNext" type="button" aria-label="Next image">›</button>
+  <button class="lb-nav lb-prev" id="lbPrev" type="button" aria-label="Previous image">&lsaquo;</button>
+  <button class="lb-nav lb-next" id="lbNext" type="button" aria-label="Next image">&rsaquo;</button>
   <div class="lb-foot" id="lbCount"></div>
 </div>
 <script src="../assets/app.js" defer></script>
